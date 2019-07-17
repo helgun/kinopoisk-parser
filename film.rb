@@ -24,5 +24,4 @@ class Film
   def to_s
     "#{@director.chomp} - #{@title.chomp} (#{@year.chomp})"
   end
-
 end
