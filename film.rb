@@ -3,8 +3,8 @@ class Film
 
   def self.from_list
     films = []
-    url = "https://www.kinopoisk.ru/top/lists/1/filtr/all/sort/order/perpage/200"
-    html = open(url)
+    URL = "https://www.kinopoisk.ru/top/lists/1/filtr/all/sort/order/perpage/200"
+    html = open(URL)
     doc = Nokogiri::HTML(html)
     doc.css('table#itemList .news').each do |movie|
       title_parsed = movie.css("a").first.text
