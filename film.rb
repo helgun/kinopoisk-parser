@@ -1,7 +1,7 @@
 class Film
   attr_reader :director, :title, :year
 
-  def self.from_list
+  def self.all_from_list
     films = []
     URL = "https://www.kinopoisk.ru/top/lists/1/filtr/all/sort/order/perpage/200"
     html = open(URL)
