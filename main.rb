@@ -4,7 +4,7 @@ require_relative "film"
 
 films = []
 
-films = Film.from_list
+films = Film.all_from_list
 puts "Фильм какого режиссера будем смотреть?"
 directors = films.map { |z| z.director }.uniq
 directors.each.with_index(1) do |director, index|
