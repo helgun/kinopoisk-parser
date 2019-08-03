@@ -1,9 +1,9 @@
 class Film
+  URL = "https://www.kinopoisk.ru/top/lists/1/filtr/all/sort/order/perpage/200"
   attr_reader :director, :title, :year
-
+  
   def self.all_from_list
     films = []
-    URL = "https://www.kinopoisk.ru/top/lists/1/filtr/all/sort/order/perpage/200"
     html = open(URL)
     doc = Nokogiri::HTML(html)
     doc.css('table#itemList .news').each do |movie|
